@@ -20,11 +20,11 @@ In this project, we use have used Principal Component Analysis and Support Vecto
     1) This dot product is the new reduced feature matrix.
 
 1) Next, **Binary Support Vector Machine** model has been implemented as follows:
-   1. **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
+    1) **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
 
 ![weight_equation](https://user-images.githubusercontent.com/62309350/229274437-e57e588a-71a3-4687-be30-f064b9376b1d.png)
 
-1. **Training/Fitting**: -
+    1) **Training/Fitting**: -
 
 The training algorithm is run in a loop for a set number of iterations to gain the optimal values of the weights till the convergence occurs. The algorithm is as follows.
 
