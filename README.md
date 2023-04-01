@@ -40,7 +40,7 @@ In this project, we use have used Principal Component Analysis and Support Vecto
             
         1) Weights are updated as follows:
             
-        ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
+            ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
         
     1) **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
     1) **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
