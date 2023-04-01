@@ -24,16 +24,16 @@ In this project, we use have used Principal Component Analysis and Support Vecto
         
         ![weight_equation](https://user-images.githubusercontent.com/62309350/229274437-e57e588a-71a3-4687-be30-f064b9376b1d.png)
 
-      1) **Training/Fitting**: -
+    1) **Training/Fitting**: -
         
-          The training algorithm is run in a loop for a set number of iterations to gain the optimal values of the weights till the convergence occurs. The algorithm is as follows.
+        The training algorithm is run in a loop for a set number of iterations to gain the optimal values of the weights till the convergence occurs. The algorithm is as follows.
         
-      1) A random sample is chosen from the training dataset.
-      1) The loss function value is computed with current weight values.
-          
-          ![loss_function](https://user-images.githubusercontent.com/62309350/229274493-b5505fd3-6509-4ba0-ad45-57ce1e81f776.png)
-          
-      1) The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
+        1) A random sample is chosen from the training dataset.
+        1) The loss function value is computed with current weight values.
+            
+            ![loss_function](https://user-images.githubusercontent.com/62309350/229274493-b5505fd3-6509-4ba0-ad45-57ce1e81f776.png)
+            
+            1) The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
       1) When ![image](https://user-images.githubusercontent.com/62309350/229274641-09712f53-c52a-4c2a-b4d2-6f22571d6de7.png), the gradient is defined. Hence,
           
           ![loss_gradient](https://user-images.githubusercontent.com/62309350/229274523-493fb025-0874-47f9-bf8a-75d846e9be70.png)
