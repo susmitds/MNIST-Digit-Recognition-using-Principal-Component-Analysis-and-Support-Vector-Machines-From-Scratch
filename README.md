@@ -1,16 +1,3 @@
-﻿E0-270 (Machine Learning)
-
-Indian Institute of Science
-
-MNIST Digit Recognition using Principal Component Analysis and Support Vector Machines
-
-![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.001.png)![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.001.png)
-
-Susmit Das
-
-![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.001.png)![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.001.png)
-
-
 **Abstract:**
 
 In this project, we use have used Principal Component Analysis and Support Vector Machines on MNIST Dataset. The dataset consists of 60, 000 training images and 10, 000 test images. Each image is a 28 × 28 grayscale image of a handwritten digit. Each pixel of the image is represented by a single integer between 0 and 255, and so each image is a 784-dimensional vector. PCA has been implemented to reduce the dimensionality of this vector and a multi-class SVM model, consisting of ten binary SVM models, is trained using the training images with optimal values for hyperparameters, learning rate, number of iterations and regularization factor. Then the test images are classified using the trained multi-class SVM model. Then, an analysis is performed to find the minimum optimal number of principal components, which is sufficient for accurately predicting the digits.
@@ -70,23 +57,9 @@ wt+1=wt-γ∇Jwt             | where γ is the learning rate
    1. Separate confusion matrices are created for each digit from 0-9, which is used to get Precision, Recall, F1-score of each class. The mean of all classes gives us the macro-averaged Precision, Recall, F1-score.
 
 
+**Results:**
 
-![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.002.png)**Results:**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![metrics](https://user-images.githubusercontent.com/62309350/229274092-08f393a7-9e52-46dd-b24a-d7867874fe7d.png)
 
 The process is repeated using different number of components for PCA and the performance metrics of the multi-class SVM model is compared using learning rate of 0.0001 at 10000 iterations and regularization factor as 1.0.
 
@@ -107,24 +80,9 @@ The process is repeated using different number of components for PCA and the per
 1. When the model was run at lower number of iterations, the precision remained relatively high, but recall and f1-score was much lesser, indicating that **prevalence of false negatives decreases with higher number of iterations** at the cost of required training time.
 1. Higher learning rates with constant number of iterations was resulting worse values for all metrics apart from precision.
 
-![](Aspose.Words.5a051f23-4363-4b09-ae85-dc9c500b0a61.003.png)Checking the performance metrics of each individual binary SVM model of the multiclass SVM model without using PCA gives us a clearer understanding of its overall performance.
+Checking the performance metrics of each individual binary SVM model of the multiclass SVM model without using PCA gives us a clearer understanding of its overall performance.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![debug_metrics](https://user-images.githubusercontent.com/62309350/229274137-d945095e-ebd2-48d2-aa32-0f0a65e3c049.png)
 
 |**Model of Digit**|**Accuracy**|**Precision**|**Recall**|**F1-score**|
 | :-: | :-: | :-: | :-: | :-: |
