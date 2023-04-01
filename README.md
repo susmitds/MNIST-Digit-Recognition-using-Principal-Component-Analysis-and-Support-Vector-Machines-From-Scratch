@@ -22,6 +22,7 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 
 1) Next, **Binary Support Vector Machine** model has been implemented as follows:
     1) **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
+        
         ![2](https://user-images.githubusercontent.com/62309350/229285390-aaaa5a02-3e7e-4cbf-9fb7-9117a0c92ff6.png#gh-light-mode-only)
         ![2d](https://user-images.githubusercontent.com/62309350/229285398-3f025da8-ee82-4531-b8f5-cf597ca332f4.png#gh-dark-mode-only)
 
