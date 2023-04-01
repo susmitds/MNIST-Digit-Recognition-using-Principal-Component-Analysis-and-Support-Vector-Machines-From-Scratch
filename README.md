@@ -5,7 +5,7 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 **Methodology:**
 
 1) First, the training and testing data is **normalized** by changing base and scale of the pixel data to fit between -1 and 1. The original grayscale values of each pixel lies between 0 and 255.
-    ![norm_equation]([https://user-images.githubusercontent.com/62309350/229274383-8902c2be-dbd1-4b22-a09b-cc671215f90c.png](https://user-images.githubusercontent.com/62309350/229278986-b315eeb1-fa27-4803-9d5e-e7b672d59dfc.png#gh-light-mode-only)![norm_equation](https://user-images.githubusercontent.com/62309350/229279247-b3b99c91-61f7-4498-bf0c-1f4c697e1dee.png#gh-dark-mode-only)
+    ![norm_equation]([https://user-images.githubusercontent.com/62309350/229274383-8902c2be-dbd1-4b22-a09b-cc671215f90c.png](https://user-images.githubusercontent.com/62309350/229278986-b315eeb1-fa27-4803-9d5e-e7b672d59dfc.png#gh-light-mode-only)(https://user-images.githubusercontent.com/62309350/229279247-b3b99c91-61f7-4498-bf0c-1f4c697e1dee.png#gh-dark-mode-only)
 
 1) Then, **Principal Component Analysis** is used to reduce the dimensionality of the 784-dimensional vector of the training and testing images.
     
