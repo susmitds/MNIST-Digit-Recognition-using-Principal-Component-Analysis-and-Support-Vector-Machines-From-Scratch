@@ -5,7 +5,8 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 **Methodology:**
 
 1) First, the training and testing data is **normalized** by changing base and scale of the pixel data to fit between -1 and 1. The original grayscale values of each pixel lies between 0 and 255.
-    ![norm_equation](https://user-images.githubusercontent.com/62309350/229278986-b315eeb1-fa27-4803-9d5e-e7b672d59dfc.png#gh-light-mode-only)
+    ![1](https://user-images.githubusercontent.com/62309350/229285332-88da58ba-2743-45f7-b3a6-d8a8dd824849.png#gh-light-mode-only)
+    ![1d](https://user-images.githubusercontent.com/62309350/229285351-19b281dd-e23d-4858-9f0c-0fe22593a10e.png#gh-dark-mode-only)
 1) Then, **Principal Component Analysis** is used to reduce the dimensionality of the 784-dimensional vector of the training and testing images.
     
     Workflow of Principal Component Analysis:
@@ -20,8 +21,8 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 
 1) Next, **Binary Support Vector Machine** model has been implemented as follows:
     1) **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
-        
-        ![weight_equation](https://user-images.githubusercontent.com/62309350/229274437-e57e588a-71a3-4687-be30-f064b9376b1d.png)
+        ![2](https://user-images.githubusercontent.com/62309350/229285390-aaaa5a02-3e7e-4cbf-9fb7-9117a0c92ff6.png#gh-light-mode-only)
+        ![2d](https://user-images.githubusercontent.com/62309350/229285398-3f025da8-ee82-4531-b8f5-cf597ca332f4.png#gh-dark-mode-only)
 
     1) **Training/Fitting**: -
         
@@ -30,18 +31,22 @@ In this project, we use have used Principal Component Analysis and Support Vecto
         1) A random sample is chosen from the training dataset.
         1) The loss function value is computed with current weight values.
             
-            ![loss_function](https://user-images.githubusercontent.com/62309350/229274493-b5505fd3-6509-4ba0-ad45-57ce1e81f776.png)
+            ![3](https://user-images.githubusercontent.com/62309350/229285438-9182535c-d36e-4dd4-b906-aad32cc7c4d4.png#gh-light-mode-only)
+            ![3d](https://user-images.githubusercontent.com/62309350/229285445-9b7bb525-675d-4cda-a55f-582de3b324e2.png#gh-dark-mode-only)
             
-        1) The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
-        1) When ![image](https://user-images.githubusercontent.com/62309350/229274641-09712f53-c52a-4c2a-b4d2-6f22571d6de7.png), the gradient is defined. Hence,
+        1) The gradient vector, ![a](https://user-images.githubusercontent.com/62309350/229285566-9ac600de-10c2-4f73-9438-d19b1f955271.png#gh-light-mode-only)![ad](https://user-images.githubusercontent.com/62309350/229285570-1ea1dfa8-c8c6-435c-a97e-dfe24f895995.png#gh-dark-mode-only) is initialized with zero sub-gradients.
+        1) When ![b](https://user-images.githubusercontent.com/62309350/229285658-02bc7ad1-cb79-426d-bf87-e9bc2258e8f0.png#gh-light-mode-only)![bd](https://user-images.githubusercontent.com/62309350/229285664-ca0ffc6a-556b-4c11-98a3-f259c410c69a.png#gh-dark-mode-only), the gradient is defined. Hence,
             
-            ![loss_gradient](https://user-images.githubusercontent.com/62309350/229274523-493fb025-0874-47f9-bf8a-75d846e9be70.png)
+            ![4](https://user-images.githubusercontent.com/62309350/229285461-4a3476b4-01ac-4434-9c9d-96b5c4cdde28.png#gh-light-mode-only)
+            ![4d](https://user-images.githubusercontent.com/62309350/229285469-bf0d7d2b-18c7-4259-bb74-0c5bb299e3e9.png#gh-dark-mode-only)
             
         1) Weights are updated as follows:
             
-            ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
+            ![5](https://user-images.githubusercontent.com/62309350/229285530-a9e944f3-665f-4a9d-a391-fcd6be6dda72.png#gh-light-mode-only)
+            ![5d](https://user-images.githubusercontent.com/62309350/229285540-c2d939a4-1282-4ae6-b7f2-1713235f2d25.png#gh-dark-mode-only)
+
         
-    1) **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
+    1) **Prediction Score**: - ![c](https://user-images.githubusercontent.com/62309350/229285733-52b802bc-dc40-4493-8c27-bbdf2c25c30f.png#gh-light-mode-only)![cd](https://user-images.githubusercontent.com/62309350/229285738-39d308a5-562e-43f2-85a2-59006d0fe95b.png#gh-dark-mode-only) is used by the model for binary classification. ![d](https://user-images.githubusercontent.com/62309350/229285784-c454e9b5-c8b5-4c1a-aacc-9343eac32022.png#gh-light-mode-only)![dd](https://user-images.githubusercontent.com/62309350/229285786-fece4cb8-6c3d-4f81-b393-a11ae187411b.png#gh-dark-mode-only) is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
     1) **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
     1) **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
 1) **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
