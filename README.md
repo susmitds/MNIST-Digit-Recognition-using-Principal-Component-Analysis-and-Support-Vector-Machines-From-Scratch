@@ -43,14 +43,14 @@ In this project, we use have used Principal Component Analysis and Support Vecto
         ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
         
     1) **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
-    1. **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
-    1. **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
-1. **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
-   1. Ten different binary SVM models are created, each to predict one of the digits from 0-9.
-   1. For each digit i, the labels of the training data are pre-processed such that label of each row becomes 1 for all labels corresponding to the digit i, -1 for all labels corresponding to the other digits, resulting in 10 different sets of training label data, one for each model.
-   1. Each model is trained with set hyper-parameters using its own pre-processed training data for all ten digits.
-   1. Prediction is done on the test data to evaluate Accuracy of the combined model. The binary SVM model giving the highest prediction score for each row of test data is chosen, because higher score indicates higher level of confidence.
-   1. Separate confusion matrices are created for each digit from 0-9, which is used to get Precision, Recall, F1-score of each class. The mean of all classes gives us the macro-averaged Precision, Recall, F1-score.
+    1) **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
+    1) **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
+1) **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
+    1) Ten different binary SVM models are created, each to predict one of the digits from 0-9.
+    1) For each digit i, the labels of the training data are pre-processed such that label of each row becomes 1 for all labels corresponding to the digit i, -1 for all labels corresponding to the other digits, resulting in 10 different sets of training label data, one for each model.
+    1) Each model is trained with set hyper-parameters using its own pre-processed training data for all ten digits.
+    1) Prediction is done on the test data to evaluate Accuracy of the combined model. The binary SVM model giving the highest prediction score for each row of test data is chosen, because higher score indicates higher level of confidence.
+    1) Separate confusion matrices are created for each digit from 0-9, which is used to get Precision, Recall, F1-score of each class. The mean of all classes gives us the macro-averaged Precision, Recall, F1-score.
 
 
 **Results:**
