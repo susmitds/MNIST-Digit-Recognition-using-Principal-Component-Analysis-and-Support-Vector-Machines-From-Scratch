@@ -6,11 +6,7 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 
 1. First, the training and testing data is **normalized** by changing base and scale of the pixel data to fit between -1 and 1. The original grayscale values of each pixel lies between 0 and 255. 
 
-Xi∈0,255
-
-X\_normi=Xi255/2-1
-
-X\_normi∈-1,1
+![norm_equation](https://user-images.githubusercontent.com/62309350/229274383-8902c2be-dbd1-4b22-a09b-cc671215f90c.png)
 
 1. Then, **Principal Component Analysis** is used to reduce the dimensionality of the 784-dimensional vector of the training and testing images.
 
@@ -26,7 +22,7 @@ Workflow of Principal Component Analysis:
 1. Next, **Binary Support Vector Machine** model has been implemented as follows:
    1. **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
 
-i=1n(wixi+b) =i=0n(wixi)        | where,x0=1, w0=b
+![weight_equation](https://user-images.githubusercontent.com/62309350/229274437-e57e588a-71a3-4687-be30-f064b9376b1d.png)
 
 1. **Training/Fitting**: -
 
@@ -35,18 +31,18 @@ The training algorithm is run in a loop for a set number of iterations to gain t
 1. A random sample is chosen from the training dataset.
 1. The loss function value is computed with current weight values.
 
-Jw=w22+ci=0nmax⁡{0, 1-yi(wTxi)}
+![loss_function](https://user-images.githubusercontent.com/62309350/229274493-b5505fd3-6509-4ba0-ad45-57ce1e81f776.png)
 
-1. The gradient vector, ∇Jw is initialized with zero sub-gradients.
-1. When ci=0nmax⁡{0, 1-yi(wTxi)}>0, the gradient is defined. Hence,
+1. The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
+1. When ![image](https://user-images.githubusercontent.com/62309350/229274641-09712f53-c52a-4c2a-b4d2-6f22571d6de7.png), the gradient is defined. Hence,
 
-∇Jw=w+ci=0nyixi
+![loss_gradient](https://user-images.githubusercontent.com/62309350/229274523-493fb025-0874-47f9-bf8a-75d846e9be70.png)
 
 1. Weights are updated as follows:
 
-wt+1=wt-γ∇Jwt             | where γ is the learning rate
+![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
 
-1. **Prediction Score**: - ypredicted=wTx is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
+1. **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
 1. **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
 1. **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
 1. **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
