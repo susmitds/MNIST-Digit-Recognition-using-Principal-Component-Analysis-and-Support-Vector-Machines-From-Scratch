@@ -12,13 +12,13 @@ In this project, we use have used Principal Component Analysis and Support Vecto
 
 Workflow of Principal Component Analysis:
 
-1) The feature matrix is standardized.
-1) Covariance matrix of the features is computed.
-1) The eigenvectors and eigenvalues of the covariance matrix is calculated.
-1) The eigenvectors are sorted in the descending order by their corresponding eigenvalues.
-1) The first k (chosen number of components) eigenvectors is taken as components
-1) The dot product of the standardized feature matrix and components is computed.
-1) This dot product is the new reduced feature matrix.
+i) The feature matrix is standardized.
+i) Covariance matrix of the features is computed.
+i) The eigenvectors and eigenvalues of the covariance matrix is calculated.
+i) The eigenvectors are sorted in the descending order by their corresponding eigenvalues.
+i) The first k (chosen number of components) eigenvectors is taken as components
+i) The dot product of the standardized feature matrix and components is computed.
+i) This dot product is the new reduced feature matrix.
 3. Next, **Binary Support Vector Machine** model has been implemented as follows:
    1. **Initialization**: – The weight vector is initialized with zero for all features and initial zero bias. For convenience of code, a constant feature vector with value of 1 has added to the feature matrix and bias is included directly to the weight vector.
 
