@@ -33,19 +33,19 @@ In this project, we use have used Principal Component Analysis and Support Vecto
             
             ![loss_function](https://user-images.githubusercontent.com/62309350/229274493-b5505fd3-6509-4ba0-ad45-57ce1e81f776.png)
             
-            1) The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
-      1) When ![image](https://user-images.githubusercontent.com/62309350/229274641-09712f53-c52a-4c2a-b4d2-6f22571d6de7.png), the gradient is defined. Hence,
-          
-          ![loss_gradient](https://user-images.githubusercontent.com/62309350/229274523-493fb025-0874-47f9-bf8a-75d846e9be70.png)
-          
-      1) Weights are updated as follows:
-          
-          ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
-          
-1. **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
-1. **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
-1. **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
-4. **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
+        1) The gradient vector, ![image](https://user-images.githubusercontent.com/62309350/229274617-d3e1a329-f383-4129-b879-daf98fa71802.png) is initialized with zero sub-gradients.
+        1) When ![image](https://user-images.githubusercontent.com/62309350/229274641-09712f53-c52a-4c2a-b4d2-6f22571d6de7.png), the gradient is defined. Hence,
+            
+            ![loss_gradient](https://user-images.githubusercontent.com/62309350/229274523-493fb025-0874-47f9-bf8a-75d846e9be70.png)
+            
+        1) Weights are updated as follows:
+            
+        ![sgd](https://user-images.githubusercontent.com/62309350/229274672-f670d958-ca04-4573-94f2-075ef7708472.png)
+        
+    1) **Prediction Score**: - ![image](https://user-images.githubusercontent.com/62309350/229274702-a1f91f05-2f6d-4baf-a822-c4d1576ae8a5.png) is used by the model for binary classification.  ypredicted=0 is the decision boundary. Larger values indicate higher confidence on each side of the decision boundary.
+    1. **Prediction**: - This method checks the sign of the prediction score for any test data to make prediction of +1 for positive predictions scores and -1 for negative prediction scores.
+    1. **Accuracy, Precision, Recall, F1-score**: - The confusion matrix is created and used to give us the performance metrics of the binary SVM model.
+1. **Multi-Class Support Vector Machine model** for classifying digits has been implemented as follows.
    1. Ten different binary SVM models are created, each to predict one of the digits from 0-9.
    1. For each digit i, the labels of the training data are pre-processed such that label of each row becomes 1 for all labels corresponding to the digit i, -1 for all labels corresponding to the other digits, resulting in 10 different sets of training label data, one for each model.
    1. Each model is trained with set hyper-parameters using its own pre-processed training data for all ten digits.
